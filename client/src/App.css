@@ -1,0 +1,262 @@
+* {
+  font-family: 'Raleway', sans-serif;
+  --LightCyan: #E0FBFC;
+  --DarkSkyBlue: #98C1D9;
+  --BdazzledBlue: #3D5A80;
+  --BurntSinnea: #EE6C4D;
+  --Gunmental: #293241;
+}
+
+.sidebar {
+  position: fixed;
+  width: 8rem;
+  height: 100vh;
+  text-align: center;
+  box-shadow: 2px 0 10px #aaa;
+}
+
+.sidebar>h2 {
+  background: #eee;
+  padding: 1rem 0;
+}
+
+.workspace {
+  margin-left: 8rem;
+  padding: 2rem;
+  background: #eee;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.btnSidebar>svg {
+  font-size: 2rem;
+}
+
+.btnSidebar {
+  margin: 1rem 0;
+  width: 100%;
+  border: none;
+  background: none;
+  padding: 0.5rem 0;
+}
+
+.btnSidebar:hover, .btnSidebar:active, .btnSidebar:focus {
+  transition: 0.4s;
+  color: white;
+  background: var(--BurntSinnea)
+}
+
+.tileSet {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.list-group {
+  border-radius: 0.1rem;
+}
+
+.list-group>.active {
+  border: 1px solid #ddd;
+  background: white;
+  color: black;
+  font-weight: bold;
+  border-top: 2px solid var(--BurntSinnea);
+}
+
+.list-group>span>button {
+  float: right;
+  padding: 0.1rem 0.2rem;
+}
+
+.Addtask {
+  position: absolute;
+  top: 0;
+  background: rgba(50, 50, 50, 0.8);
+  height: 100vh;
+  width: 100%;
+  z-index: 9999;
+  transition: 0.8s;
+  transform: translateX(-300%);
+}
+
+.AddtaskShow {
+  transform: translateX(0);
+}
+
+.AddtaskForm {
+  position: absolute;
+  margin: 0;
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.AddtaskForm>form>input {
+  width: 100%;
+}
+
+.AddtaskForm>form::before {
+  content: 'Add Task';
+  font-size: 2rem;
+}
+
+.AddtaskForm>form>* {
+  margin: 0.4rem 0;
+}
+
+.AddtaskForm>form>button {
+  margin-right: 1rem;
+}
+
+.AddtaskForm>form {
+  width: 200%;
+  background: white;
+  padding: 1.5rem 2rem 2rem 2rem;
+  border: 2px solid var(--BurntSinnea);
+  border-radius: 0.5rem;
+}
+
+.loginWrapper {
+  width: 100%;
+  height: 100vh;
+  background: rgb(128, 233, 254);
+  background: linear-gradient(90deg, rgba(128, 233, 254, 1) 0%, rgba(255, 178, 153, 1) 100%);
+}
+
+.loginForm {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  border-radius: 0.8rem;
+  border: 2px solid var(--DarkSkyBlue);
+  box-shadow: 2px 2px 10px #bbb;
+  width: 20rem;
+  background: rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+.loginForm>svg {
+  font-size: 8rem;
+  color: white;
+  background: var(--BdazzledBlue);
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.regiester {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-500%, -50%);
+  background: white;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  border: 2px solid var(--DarkSkyBlue);
+  box-shadow: 2px 2px 10px #bbb;
+  width: 20rem;
+  transition: 0.4s;
+}
+
+.regiester>form>input {
+  margin-bottom: 1rem;
+}
+
+.showRegiesterForm {
+  transform: translate(-50%, -50%);
+  transition: 0.4s;
+}
+
+.regBtns {
+  margin: 1rem 0.5rem 0.2rem 0;
+}
+
+#alert {
+  display: none;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+.list-group-item {
+  display: flex;
+}
+
+.list-group-item>div {
+  flex: 5;
+}
+
+.list-group-item>button {
+  flex: 1;
+}
+
+.list-group-item-action>div>small {
+  /* color: var(--BdazzledBlue); */
+  color: #999;
+}
+
+.list-group-item-action {
+  font-size: 1.1rem;
+  font-weight: bolder;
+  color: var(--Gunmental);
+}
+
+.todoHead {
+  font-size: 1.4rem;
+}
+
+#greating {
+  text-transform: capitalize;
+}
+
+#Incomplete, #Ongoing, #Complete {
+  height: 100%;
+  padding: 0.4rem;
+  border-radius: 2rem;
+}
+
+#Incomplete {
+  border: 1px solid #dc3545;
+  color: #dc3545;
+}
+
+#Incomplete:hover {
+  background: #dc3545;
+  color: white;
+}
+
+#Ongoing {
+  border: 1px solid #007bff;
+  color: #007bff;
+}
+
+#Ongoing:hover {
+  background: #007bff;
+  color: white;
+}
+
+#Complete {
+  border: 1px solid #28a745;
+  color: #28a745;
+}
+
+#Complete {
+  background: #28a745;
+  color: white;
+}
+
+#addTaskSucess {
+  transition: 0.4s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--BurntSinnea);
+  transform: translateX(-100vw);
+}

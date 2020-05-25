@@ -1,0 +1,84 @@
+* {
+  --LightCyan: #E0FBFC;
+  --DarkSkyBlue: #98C1D9;
+  --BdazzledBlue: #3D5A80;
+  --BurntSinnea: #EE6C4D;
+  --Gunmental: #293241;
+}
+
+.sidebarTogel {
+  position: fixed;
+  z-index: 10000;
+  background: var(--BurntSinnea);
+  width: 100%;
+  padding: 0.2rem;
+  display: none;
+}
+
+.sidebarTogel>button {
+  border: none;
+  color: white;
+  background: none;
+  margin: 0.2rem;
+}
+
+.sidebarTogel>button>svg {
+  font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .sidebarTogel {
+    display: block;
+  }
+
+  .sidebar {
+    margin-top: 3rem;
+    transform: translateX(-200%);
+    z-index: 99;
+    background: #eee;
+    transition: 0.4s;
+    font-size: 0.8rem;
+  }
+
+  .workspace {
+    margin-left: 0;
+    padding-top: 3.5rem;
+  }
+
+  .btnSidebar>svg {
+    font-size: 1.5rem;
+  }
+
+  .AddtaskForm {
+    position: absolute;
+    text-align: center;
+    overflow: hidden;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    /* margin: 2rem; */
+  }
+
+  .AddtaskForm>form {
+    width: 100vw;
+    padding: 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .tileSet {
+    grid-template-columns: 1fr;
+    grid-gap: 1.7rem;
+  }
+
+  .workspace {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+}
+
+@media only screen and (min-width: 2289px) {
+  .tileSet {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.7rem;
+  }
+}
