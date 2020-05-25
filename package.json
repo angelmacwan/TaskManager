@@ -2,7 +2,7 @@
   "name": "todomanager",
   "version": "1.0.0",
   "engines": {
-    "node": "12.16.x"
+    "node": "14.2.x"
   },
   "description": "Todo list manager",
   "main": "server.js",
